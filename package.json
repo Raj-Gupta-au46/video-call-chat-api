@@ -1,0 +1,45 @@
+{
+  "name": "v_chat_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "heroku-postbuild": "npm run build",
+    "start": "node build/index.js",
+    "build": "rimraf ./build && tsc && rimraf ./src ",
+    "dev": "ts-node-dev --poll ./src/index.ts"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.30.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-fileupload": "^1.4.0",
+    "express-validator": "^6.14.2",
+    "http-errors": "^2.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.3.0",
+    "mongoose": "^6.4.1",
+    "nodemailer": "^6.8.0",
+    "socket.io": "^4.5.4",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-fileupload": "^1.2.2",
+    "@types/http-errors": "^1.8.2",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/md5": "^2.3.2",
+    "@types/node": "^18.0.0",
+    "@types/nodemailer": "^6.4.6",
+    "@types/uuid": "^8.3.4",
+    "rimraf": "^3.0.2",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  }
+}
